@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+   <div class="min-h-screen">
+
+   </div>
+   <div class="grid grid-cols-3 space-x-3s">
+   {% for new in news %}
+     {% include "sarmates/components/card.html.twig" %}
+   {% endfor %}
+   
+   <div>
+{% endblock %}

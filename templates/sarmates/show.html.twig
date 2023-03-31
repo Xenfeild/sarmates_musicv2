@@ -1,0 +1,27 @@
+{# utilisation du layout #}
+{% extends "base.html.twig" %}
+
+
+{# title of page #}
+{% block title %} 
+
+{% endblock title %}
+
+
+{# content #}
+{% block body %}
+    <h1 class="text-indigo-700 font-bold text-3xl pb-6 text-center">{{ news.title }}</h1>
+
+    {# <div class="grid grid-cols-3 space-x-3s "> #}
+        <div class="">
+            <img src"{{ news.urlImg }}" alt="{{ news.title }}">
+        </div>
+    </div>
+    <div>
+        <p>{{ news.content }}</p>
+    </div>
+    <div class="">
+    <a href="" class="btn btn-primary">modifier</a>
+    <a href="{{ path('app_delete', { 'id':news.id }) }}" class="btn btn-secondary">Supprimer</a>
+
+{% endblock %}
